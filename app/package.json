@@ -1,0 +1,6 @@
+{
+  "name": "test",
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}
