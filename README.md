@@ -4,9 +4,9 @@ Repo demonstrates [issue](https://github.com/nodejs/node/issues/5726) when tryin
 
 ## Environment
 
-Platform: Windows 10 Pro x64 Build 10586
-Node: 5.8.0
-NPM: 3.7.3
+* Platform: Windows 10 Pro x64 Build 10586
+* Node: 5.8.0
+* NPM: 3.7.3
 
 ## Steps to reproduce
 
