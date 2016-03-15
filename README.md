@@ -1,6 +1,6 @@
 # npm-link-peer-require
 
-Repo demonstrates issue when trying to require peer dependency from the linked module.
+Repo demonstrates [issue](https://github.com/nodejs/node/issues/5726) when trying to require peer dependency from the linked module.
 
 ## Environment
 
