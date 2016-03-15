@@ -10,6 +10,8 @@ Repo demonstrates [issue](https://github.com/nodejs/node/issues/5726) when tryin
 
 ## Steps to reproduce
 
+### Requiring linked peer module from linked module - fails
+
 * run `npm link` in _dep1_ directory
 * run `npm link` in _dep2_ directory
 * run `npm link dep1` in _app_ directory
@@ -18,10 +20,19 @@ Repo demonstrates [issue](https://github.com/nodejs/node/issues/5726) when tryin
 
 Process will fail to find _dep2_ module from within _dep1_ module.
 
-## What works...
+### Requiring linked peer module from regular module - works
 
-When requiring linked from regular module, everything works correctly.
+Following the setup from previous step and doing this...
 
 * run `npm unlink dep1` in _app_ directory
 * copy _dep1_ directory into _app/node_modules_ directory
 * run `node app/index.js`
+
+The _dep2_ module is now successfully loaded, but...
+
+### Requiring regular peer module from linked module - fails
+
+* run `npm install` in _app_ directory first
+* run `node app/index.js`
+
+The `debug` module is required from _dep2_ module which is linked, but it cannot be found.
